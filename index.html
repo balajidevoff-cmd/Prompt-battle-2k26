@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PROMPT BATTLE 2K26 | AI Creative Competition</title>
+  <meta name="description" content="PROMPT BATTLE 2K26 – A college AI creative competition featuring Image Generation and Video Generation challenges. Imagine. Prompt. Create." />
+  <meta property="og:title" content="PROMPT BATTLE 2K26 | AI Creative Competition" />
+  <meta property="og:description" content="Turn ideas into stunning AI images and videos. Join the ultimate prompt engineering battle." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;800;900&family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ========== NAVBAR ========== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <div class="nav-logo">
+        <span class="logo-icon">⚡</span>
+        <span class="logo-text">PROMPT BATTLE <span class="logo-year">2K26</span></span>
+      </div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#challenges" class="nav-link">Challenges</a></li>
+        <li><a href="#rules" class="nav-link">Rules</a></li>
+        <li><a href="#how-it-works" class="nav-link">How It Works</a></li>
+        <li><a href="#samples" class="nav-link">Samples</a></li>
+        <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSeiktECqN_flGp5xRGLt6TtLcPwN7ZkSzUyrS541UX8WSHmpA/viewform?usp=sharing&ouid=114461451823543940105" target="_blank" class="nav-cta-btn" id="navRegister">Register Now</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ========== HERO SECTION ========== -->
+  <section class="hero" id="hero">
+    <div class="hero-bg-overlay"></div>
+    <canvas id="particleCanvas"></canvas>
+
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="badge-dot"></span>
+        <span>AI CREATIVE COMPETITION · 2026</span>
+      </div>
+      <h1 class="hero-title">
+        <span class="title-line glitch" data-text="PROMPT">PROMPT</span>
+        <span class="title-line title-battle glitch" data-text="BATTLE">BATTLE</span>
+        <span class="title-line title-year">2K26</span>
+      </h1>
+      <p class="hero-subtitle">Imagine. Prompt. Create.</p>
+      <p class="hero-description">
+        A creative AI battle where participants turn ideas into stunning images and videos
+        using the power of prompts. Unleash your imagination and let AI do the magic.
+      </p>
+      <div class="hero-actions">
+        <a href="#challenges" class="btn btn-primary" id="viewChallengesBtn">
+          <span>View Challenges</span>
+          <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSeiktECqN_flGp5xRGLt6TtLcPwN7ZkSzUyrS541UX8WSHmpA/viewform?usp=sharing&ouid=114461451823543940105" target="_blank" class="btn btn-outline" id="heroRegisterBtn">
+          <span>Register Free</span>
+        </a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat-item">
+          <span class="stat-number">2</span>
+          <span class="stat-label">Challenges</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-number">∞</span>
+          <span class="stat-label">Creativity</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-number">1</span>
+          <span class="stat-label">Winner</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-scroll-indicator">
+      <span>Scroll to explore</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ========== ABOUT SECTION ========== -->
+  <section class="about-section" id="about">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">ABOUT THE EVENT</span>
+        <h2 class="section-title">What is <span class="gradient-text">Prompt Battle?</span></h2>
+        <p class="section-desc">
+          Prompt Battle 2K26 is a cutting-edge AI creative competition hosted as part of our college tech fest,
+          challenging participants to craft powerful, imaginative prompts that produce breathtaking AI-generated
+          content — images and videos alike.
+        </p>
+      </div>
+
+      <div class="about-cards">
+        <div class="about-card glass-card" data-aos="fade-up">
+          <div class="card-icon">🎨</div>
+          <h3>Creative Prompting</h3>
+          <p>Craft precise, creative prompts that guide AI tools to generate stunning visuals matching given themes.</p>
+        </div>
+        <div class="about-card glass-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="card-icon">🤖</div>
+          <h3>AI-Powered Output</h3>
+          <p>Leverage state-of-the-art AI image and video generation platforms to bring your imagination to life.</p>
+        </div>
+        <div class="about-card glass-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="card-icon">🏆</div>
+          <h3>Compete & Win</h3>
+          <p>Compete with peers, impress the judges, and walk away with glory and exciting prizes.</p>
+        </div>
+        <div class="about-card glass-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="card-icon">⚡</div>
+          <h3>Real-time Battle</h3>
+          <p>Experience the thrill of a live prompt battle — rapid iteration, instant feedback, and pure creativity.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CHALLENGES SECTION ========== -->
+  <section class="challenges-section" id="challenges">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">COMPETITION TRACKS</span>
+        <h2 class="section-title">The <span class="gradient-text">Challenges</span></h2>
+        <p class="section-desc">Two distinct tracks, one ultimate goal — create something extraordinary with AI.</p>
+      </div>
+
+      <!-- CHALLENGE 1: IMAGE GENERATION -->
+      <div class="challenge-block" id="imageChallenge">
+        <div class="challenge-label challenge-label--image">
+          <span class="challenge-number">01</span>
+          <span class="challenge-type">IMAGE GENERATION</span>
+        </div>
+
+        <div class="challenge-inner">
+          <div class="challenge-content">
+            <div class="challenge-header">
+              <div class="challenge-icon-wrap image-icon-wrap">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+              </div>
+              <div>
+                <h3 class="challenge-title">AI Image Generation</h3>
+                <p class="challenge-subtitle">BMW Cinematic Masterpiece</p>
+              </div>
+            </div>
+
+            <p class="challenge-desc">
+              Craft the perfect prompt to recreate a stunning cinematic BMW luxury automotive photo using AI image generation tools.
+              Your prompt must guide the AI to produce a high-quality, ultra-realistic image matching the reference.
+            </p>
+
+            <div class="prompt-points">
+              <h4 class="prompt-points-title">
+                <span class="pp-icon">📋</span> Prompt Requirements
+              </h4>
+              <ul class="prompt-list">
+                <li><span class="pp-tag">Car</span> BMW sports car</li>
+                <li><span class="pp-tag">Color</span> Glossy black finish</li>
+                <li><span class="pp-tag">Reflection</span> Strong mirror reflection of the car</li>
+                <li><span class="pp-tag">Smoke</span> Thick white smoke surrounding & reflecting around the car</li>
+                <li><span class="pp-tag">Text</span> Bold "BMW" lettering visible in the scene</li>
+                <li><span class="pp-tag">Background</span> Modern city buildings</li>
+                <li><span class="pp-tag">Lighting</span> Bright city lights, streetlights & traffic signals</li>
+                <li><span class="pp-tag">Effects</span> Motion blur and light trails</li>
+                <li><span class="pp-tag">Style</span> Cinematic luxury automotive photography</li>
+                <li><span class="pp-tag">Camera</span> Low-angle close-up shot</li>
+                <li><span class="pp-tag">Quality</span> Ultra-realistic, sharp details, 4K</li>
+                <li><span class="pp-tag">Grading</span> Dark, high-contrast with warm city-light highlights</li>
+                <li><span class="pp-tag">Composition</span> BMW remains the main focus</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="challenge-preview">
+            <div class="preview-card glass-card image-preview-card">
+              <div class="preview-header">
+                <span class="preview-dot red"></span>
+                <span class="preview-dot yellow"></span>
+                <span class="preview-dot green"></span>
+                <span class="preview-title">Sample Reference Output</span>
+              </div>
+              <div class="preview-media-wrap" id="imagePreviewWrap">
+                <img src="src/bmw.jpeg" alt="Sample BMW AI Generated Image" class="preview-image" id="sampleImage" />
+                <div class="preview-overlay">
+                  <button class="preview-btn" id="fullscreenImgBtn" aria-label="View fullscreen">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"/></svg>
+                    Fullscreen
+                  </button>
+                </div>
+              </div>
+              <div class="preview-footer">
+                <span class="preview-badge">🔥 AI Generated · Image</span>
+                <span class="preview-quality">4K Ultra HD</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CHALLENGE 2: VIDEO GENERATION -->
+      <div class="challenge-block challenge-block--video" id="videoChallenge">
+        <div class="challenge-label challenge-label--video">
+          <span class="challenge-number">02</span>
+          <span class="challenge-type">VIDEO GENERATION</span>
+        </div>
+
+        <div class="challenge-inner challenge-inner--reverse">
+          <div class="challenge-preview">
+            <div class="preview-card glass-card video-preview-card">
+              <div class="preview-header">
+                <span class="preview-dot red"></span>
+                <span class="preview-dot yellow"></span>
+                <span class="preview-dot green"></span>
+                <span class="preview-title">Sample Reference Output</span>
+              </div>
+              <div class="preview-media-wrap video-wrap">
+                <video id="sampleVideo" class="preview-video" preload="metadata" poster="">
+                  <source src="src/edu robo.mp4" type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+                <div class="video-overlay" id="videoOverlay">
+                  <button class="play-btn" id="playBtn" aria-label="Play video">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                  </button>
+                </div>
+                <div class="video-controls" id="videoControls">
+                  <button class="vc-btn" id="vcPlayPause" aria-label="Play/Pause">
+                    <svg id="vcPlayIcon" viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M8 5v14l11-7z"/></svg>
+                    <svg id="vcPauseIcon" viewBox="0 0 24 24" fill="currentColor" width="16" height="16" style="display:none"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
+                  </button>
+                  <div class="progress-bar-wrap" id="progressWrap">
+                    <div class="progress-bar" id="progressBar"></div>
+                  </div>
+                  <span class="vc-time" id="vcTime">0:00</span>
+                  <button class="vc-btn" id="vcMute" aria-label="Mute/Unmute">
+                    <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02z"/></svg>
+                  </button>
+                  <button class="vc-btn" id="vcFullscreen" aria-label="Fullscreen">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"/></svg>
+                  </button>
+                </div>
+              </div>
+              <div class="preview-footer">
+                <span class="preview-badge">🎬 AI Generated · Video</span>
+                <span class="preview-quality">4K · 10s</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="challenge-content">
+            <div class="challenge-header">
+              <div class="challenge-icon-wrap video-icon-wrap">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg>
+              </div>
+              <div>
+                <h3 class="challenge-title">AI Video Generation</h3>
+                <p class="challenge-subtitle">Educational Robot in Action</p>
+              </div>
+            </div>
+
+            <p class="challenge-desc">
+              Engineer a detailed prompt that directs an AI video generator to create a short,
+              entertaining and educational 10-second clip featuring a futuristic robot teacher.
+            </p>
+
+            <div class="prompt-points">
+              <h4 class="prompt-points-title">
+                <span class="pp-icon">📋</span> Prompt Requirements
+              </h4>
+              <ul class="prompt-list">
+                <li><span class="pp-tag pp-tag--video">Duration</span> 10 seconds</li>
+                <li><span class="pp-tag pp-tag--video">Character</span> Friendly futuristic educational robot</li>
+                <li><span class="pp-tag pp-tag--video">Location</span> High-tech classroom / laboratory</li>
+                <li><span class="pp-tag pp-tag--video">Robot</span> Expressive and entertaining</li>
+                <li><span class="pp-tag pp-tag--video">Topic</span> Explain one simple science fact</li>
+                <li><span class="pp-tag pp-tag--video">Dialogue</span> "Did you know? Light travels faster than sound!"</li>
+                <li><span class="pp-tag pp-tag--video">Effect</span> Lightning hologram + delayed thunder-wave animation</li>
+                <li><span class="pp-tag pp-tag--video">Ending</span> Funny reaction and thumbs-up</li>
+                <li><span class="pp-tag pp-tag--video">Visuals</span> Holographic screens & futuristic tech</li>
+                <li><span class="pp-tag pp-tag--video">Camera</span> Dynamic cinematic movement</li>
+                <li><span class="pp-tag pp-tag--video">Style</span> Fun, energetic and educational</li>
+                <li><span class="pp-tag pp-tag--video">Quality</span> Realistic 3D animation, cinematic lighting, 4K</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== RULES SECTION ========== -->
+  <section class="rules-section" id="rules">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">GUIDELINES</span>
+        <h2 class="section-title">Rules & <span class="gradient-text">Instructions</span></h2>
+        <p class="section-desc">Read carefully before you participate. Follow the rules to compete fairly.</p>
+      </div>
+
+      <div class="rules-grid">
+        <div class="rule-card glass-card">
+          <div class="rule-num">01</div>
+          <h4>Prompt Only</h4>
+          <p>Only the text prompt is evaluated. No post-processing, editing, or filters allowed on the generated output.</p>
+        </div>
+        <div class="rule-card glass-card">
+          <div class="rule-num">02</div>
+          <h4>Allowed Tools</h4>
+          <p>Use any publicly available AI tool (e.g., Midjourney, DALL·E, Stable Diffusion, Sora, Runway, Pika etc.).</p>
+        </div>
+        <div class="rule-card glass-card">
+          <div class="rule-num">03</div>
+          <h4>Original Prompts</h4>
+          <p>Prompts must be original. Copying from the internet or other participants is strictly prohibited.</p>
+        </div>
+        <div class="rule-card glass-card">
+          <div class="rule-num">04</div>
+          <h4>Time Limit</h4>
+          <p>Participants will be given a fixed time window to craft their prompt and submit the AI-generated output.</p>
+        </div>
+        <div class="rule-card glass-card">
+          <div class="rule-num">05</div>
+          <h4>Submission Format</h4>
+          <p>Image entries: JPG/PNG. Video entries: MP4/MOV, max 30 seconds. Submit via the official portal.</p>
+        </div>
+        <div class="rule-card glass-card">
+          <div class="rule-num">06</div>
+          <h4>Judging Criteria</h4>
+          <p>Scored on: Prompt Quality (40%), Visual Accuracy (30%), Creativity (20%), Technical Detail (10%).</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== HOW IT WORKS ========== -->
+  <section class="how-section" id="how-it-works">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">PROCESS</span>
+        <h2 class="section-title">How It <span class="gradient-text">Works</span></h2>
+        <p class="section-desc">Four simple steps to compete in Prompt Battle 2K26.</p>
+      </div>
+
+      <div class="steps-container">
+        <div class="steps-line"></div>
+        <div class="step-item">
+          <div class="step-circle">
+            <span>01</span>
+          </div>
+          <div class="step-content glass-card">
+            <h4>Register</h4>
+            <p>Sign up using the registration form and choose your challenge track — Image or Video generation.</p>
+          </div>
+        </div>
+        <div class="step-item">
+          <div class="step-circle">
+            <span>02</span>
+          </div>
+          <div class="step-content glass-card">
+            <h4>Analyze the Reference</h4>
+            <p>Study the sample outputs provided for each challenge and understand the target visual style and elements.</p>
+          </div>
+        </div>
+        <div class="step-item">
+          <div class="step-circle">
+            <span>03</span>
+          </div>
+          <div class="step-content glass-card">
+            <h4>Craft Your Prompt</h4>
+            <p>Write a creative, detailed and precise prompt that will guide the AI to generate the best possible output.</p>
+          </div>
+        </div>
+        <div class="step-item">
+          <div class="step-circle">
+            <span>04</span>
+          </div>
+          <div class="step-content glass-card">
+            <h4>Generate & Submit</h4>
+            <p>Run your prompt through the AI tool, review the output, and submit it for judging before the deadline.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SAMPLE CREATIONS ========== -->
+  <section class="samples-section" id="samples">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">INSPIRATION</span>
+        <h2 class="section-title">Sample <span class="gradient-text">Creations</span></h2>
+        <p class="section-desc">Here are the reference outputs you'll be trying to replicate and surpass with your prompts.</p>
+      </div>
+
+      <div class="samples-grid">
+        <div class="sample-card glass-card">
+          <div class="sample-badge sample-badge--img">📸 Image Challenge</div>
+          <div class="sample-img-wrap">
+            <img src="src/bmw.jpeg" alt="BMW AI Sample" class="sample-img" />
+            <div class="sample-img-overlay">
+              <p class="sample-prompt-preview">"Glossy black BMW sports car, cinematic city night scene, mirror reflection, thick white smoke, motion blur, 4K..."</p>
+            </div>
+          </div>
+          <div class="sample-info">
+            <h4>BMW Cinematic Shot</h4>
+            <p>Ultra-realistic luxury automotive photography with cinematic city lighting and dramatic smoke effects.</p>
+          </div>
+        </div>
+
+        <div class="sample-card glass-card video-sample-card">
+          <div class="sample-badge sample-badge--vid">🎬 Video Challenge</div>
+          <div class="sample-img-wrap video-sample-wrap">
+            <video class="sample-video" muted loop id="sampleVideo2">
+              <source src="src/edu robo.mp4" type="video/mp4" />
+            </video>
+            <div class="sample-img-overlay video-sample-overlay">
+              <button class="sample-play-btn" id="samplePlayBtn2" aria-label="Play sample video">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+              </button>
+              <p class="sample-prompt-preview">"Futuristic educational robot in hi-tech lab explains light speed fact with lightning hologram effect, 4K cinematic..."</p>
+            </div>
+          </div>
+          <div class="sample-info">
+            <h4>Educational Robot Clip</h4>
+            <p>Expressive futuristic robot teaching a fun science fact with holographic effects in 10 exciting seconds.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== REGISTER CTA ========== -->
+  <section class="register-section" id="register">
+    <div class="register-bg-glow"></div>
+    <div class="container">
+      <div class="register-inner glass-card">
+        <div class="register-badge">🚀 LIMITED SPOTS AVAILABLE</div>
+        <h2 class="register-title">Ready to <span class="gradient-text">Battle?</span></h2>
+        <p class="register-desc">
+          Join Prompt Battle 2K26 and prove that your imagination is the most powerful tool in the AI era.
+          Register now — it's free, it's fun, and it's futuristic!
+        </p>
+        <div class="register-actions">
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSeiktECqN_flGp5xRGLt6TtLcPwN7ZkSzUyrS541UX8WSHmpA/viewform?usp=sharing&ouid=114461451823543940105" target="_blank" class="btn btn-primary btn-large" id="mainRegisterBtn">
+            <span>Register Now — It's Free!</span>
+            <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+        <div class="register-note">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+          Free entry · Open to all college students · Both tracks welcome
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="footer-glow"></div>
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <span class="logo-icon">⚡</span>
+            <span class="logo-text">PROMPT BATTLE <span class="logo-year">2K26</span></span>
+          </div>
+          <p class="footer-tagline">Imagine. Prompt. Create.</p>
+          <p class="footer-about">The ultimate AI creative competition for college students. Turn your imagination into stunning AI-generated art.</p>
+        </div>
+        <div class="footer-links-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#challenges">Challenges</a></li>
+            <li><a href="#rules">Rules</a></li>
+            <li><a href="#how-it-works">How It Works</a></li>
+            <li><a href="#samples">Sample Creations</a></li>
+          </ul>
+        </div>
+        <div class="footer-links-col">
+          <h4>Participate</h4>
+          <ul>
+            <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSeiktECqN_flGp5xRGLt6TtLcPwN7ZkSzUyrS541UX8WSHmpA/viewform?usp=sharing&ouid=114461451823543940105" target="_blank">Register Now</a></li>
+            <li><a href="#imageChallenge">Image Challenge</a></li>
+            <li><a href="#videoChallenge">Video Challenge</a></li>
+          </ul>
+        </div>
+        <div class="footer-links-col">
+          <h4>Tracks</h4>
+          <ul>
+            <li><a href="#imageChallenge">🎨 AI Image Generation</a></li>
+            <li><a href="#videoChallenge">🎬 AI Video Generation</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 PROMPT BATTLE 2K26 · All Rights Reserved</p>
+        <p class="footer-made">Made with ⚡ for the AI generation</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- FULLSCREEN IMAGE MODAL -->
+  <div class="modal-overlay" id="imageModal" role="dialog" aria-modal="true">
+    <div class="modal-inner">
+      <button class="modal-close" id="modalClose" aria-label="Close modal">✕</button>
+      <img src="src/bmw.jpeg" alt="BMW Full Size" class="modal-image" />
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
